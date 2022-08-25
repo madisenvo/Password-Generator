@@ -118,6 +118,22 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* my additions */
+.text-box{
+  visibility: hidden;
+  width: fit-content;
+  border: 2px solid hsl(360, 91%, 36%);
+  padding: 5px;
+  margin:auto;
+}
+.options .show{
+  visibility: visible;
+}
+.label{
+  padding-right: 10px;
+}
+/* end */
+
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
