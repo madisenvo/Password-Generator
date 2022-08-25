@@ -132,6 +132,17 @@ button[disabled] {
 .label{
   padding-right: 10px;
 }
+
+#go{
+  border: none;
+  background-color: hsl(360, 91%, 36%);
+  border-radius: 25px;
+  color: hsl(0, 0%, 100%);
+  padding: 5px 10px;
+  margin: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+}
 /* end */
 
 @media (max-width: 690px) {
