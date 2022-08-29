@@ -23,30 +23,31 @@ function generatePassword() {
     alert("You must select at least one character type.")
   };
 
+  var dict = {'special':special, 'lowerCase':lowerCase, "upperCase":upperCase, 'number':number}
   var randomPassword = '';
-  var chars='';
+  const chars=[];
 
   // add characters based on user selection
   if (addNum === true) {
-    chars += number[Math.floor(Math.random() * number.length)];
+    chars.push('number');
   };
 
   if (addLower === true) {
-    chars += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+    chars.push('lowerCase');
   };
 
   if (addUpper === true) {
-    chars += upperCase[Math.floor(Math.random() * upperCase.length)];
+    chars.push('upperCase');
   };
 
   if (addSpecial === true) {
-    chars += special[Math.floor(Math.random() * special.length)];
+    chars.push("special");
   };
 
   for (let i=0; i < pLength; i++) {
-    randomPassword += chars[Math.floor(Math.random() * chars.length)];
-    console.log(`random pass: ${randomPassword}`);
-    console.log(`chars: ${chars}`);
+    var propertyArray = chars[Math.floor(Math.random() * chars.length)];
+    randomArray = dict[propertyArray];
+    randomPassword += randomArray[Math.floor(Math.random() * chars.length)];
   };
 
   return randomPassword;
