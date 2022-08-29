@@ -1,9 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var special = "!@#$%^&*()-_=+";
-var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var number = "1234567890";
+const special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+'];
+const lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+const upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+const number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
 // User prompts
 function generatePassword() {
@@ -23,67 +23,33 @@ function generatePassword() {
     alert("You must select at least one character type.")
   };
 
-// minimums
-  var minCount = 0;
-  var numMin = '';
-  var lowerMin = '';
-  var upperMin = '';
-  var specialMin = '';
+  var randomPassword = '';
+  var chars='';
 
-// generating password
-  var generator = {
-    getNum: function() {
-      return number(Math.floor(math.random() * number.length));
-    },
-
-    getLower: function() {
-      return lowerCase(Math.floor(math.random() * lowerCase.length));
-    },
-
-    getUpper: function() {
-      return upperCase(Math.floor(math.random() * upperCase.length));
-    },
-
-    getSpecial: function() {
-      return special(Math.floor(math.random() * special.length));
-    }
+  // add characters based on user selection
+  if (addNum === true) {
+    chars += number[Math.floor(Math.random() * number.length)];
   };
-  
-  return generator.getNum;
-  // if (number === true) {
-  //   numMin = generator.getNum();
-  //   minCount++;
-  // };
 
-  // if (lowerCase === true) {
-  //   lowerMin = generator.getLower();
-  //   minCount++;
-  // };
+  if (addLower === true) {
+    chars += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+  };
 
-  // if (upperCase === true) {
-  //   upperMin = generator.getUpper();
-  //   minCount++;
-  // };
+  if (addUpper === true) {
+    chars += upperCase[Math.floor(Math.random() * upperCase.length)];
+  };
 
-  // if (special === true) {
-  //   specialMin = generator.getSpecial();
-  //   minCount++;
-  // };
+  if (addSpecial === true) {
+    chars += special[Math.floor(Math.random() * special.length)];
+  };
 
-  // var randomPassword = '';
+  for (let i=0; i < pLength; i++) {
+    randomPassword += chars[Math.floor(Math.random() * chars.length)];
+    console.log(`random pass: ${randomPassword}`);
+    console.log(`chars: ${chars}`);
+  };
 
-  // for (let i=0; i < (parseInt(pLength) - minCount); i++) {
-  //   var numPicked = Math.floor(Math.random() * 4);
-  //   randomPassword += numPicked;
-  // };
-
-  //   // add characters to password
-  // randomPassword += minNum;
-  // randomPassword += minLower;
-  // randomPassword += minUpper;
-  // randomPassword += minSpecial;
-
-  // return randomPassword;
+  return randomPassword;
 };
 
 // Write password to the #password input
