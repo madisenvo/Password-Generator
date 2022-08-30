@@ -23,7 +23,11 @@ function generatePassword() {
     alert("You must select at least one character type.")
   };
 
+
+// dictionary with keys and values
   var dict = {'special':special, 'lowerCase':lowerCase, "upperCase":upperCase, 'number':number}
+  
+  // empty variable and array to add user selection/generated password to 
   var randomPassword = '';
   const chars=[];
 
@@ -44,6 +48,7 @@ function generatePassword() {
     chars.push("special");
   };
 
+// loop to randomize password
   for (let i=0; i < pLength; i++) {
     var propertyArray = chars[Math.floor(Math.random() * chars.length)];
     randomArray = dict[propertyArray];
