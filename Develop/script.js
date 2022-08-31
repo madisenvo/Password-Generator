@@ -8,8 +8,8 @@ const number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 // User prompts
 function generatePassword() {
   var pLength = prompt("Enter your desired number of characters (Note: must be between 12 and 128).");
-  if (pLength < 12 || pLength > 128){
-    alert("Length must be between 12 and 128 characters.");
+  if (pLength < 8 || pLength > 128){
+    alert("Length must be between 8 and 128 characters.");
   };
 
   if (pLength >= 8 && pLength <= 128) {
