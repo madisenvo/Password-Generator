@@ -2,7 +2,7 @@
 
 ## Description
   
-
+This program generates a random password following length and character criteria set by the user.
 
 ## Installation
 
@@ -18,7 +18,7 @@ A prompt will appear asking for your desired password length.
 
 ![prompt](images/prompt.png)
 
-If you enter a number within the defined range (12-128 characters), a series of confirmations will appear, asking if you would like to include uppercase letters, lowercase letters, numbers, and symbols.
+If you enter a number within the defined range (8-128 characters), a series of confirmations will appear, asking if you would like to include uppercase letters, lowercase letters, numbers, and symbols.
 
 ![confirmation](images/confirmation.png)
 
@@ -32,4 +32,4 @@ HTML, CSS, and JavaScript starter code provided by Denver University Full Stack 
 
 ## Features
 
-Clickable button, prompts, alerts, and confirmations 
+Dynamically updated HTML and CSS powered by JavaScript, clickable button, prompts, alerts, and confirmations 
